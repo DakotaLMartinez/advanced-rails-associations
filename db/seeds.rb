@@ -40,8 +40,7 @@ Ticket.destroy_all
 AssignedTicket.destroy_all
 
 unit = Unit.create(building_name: "Park Place", unit_number: "8J")
-ticket = Ticket.create(employee_id: employee.id, unit_id: unit.id, details: "Oven light won't come on" )
-assignment = employee.assigned_tickets.create(ticket: ticket)
+ticket = employee.tickets.create(unit: unit, details: "Oven light won't come on" )
 
 
-# binding.pry
+binding.pry
