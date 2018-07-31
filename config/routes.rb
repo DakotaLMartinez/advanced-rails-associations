@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :assigned_tickets
   resources :tickets
   resources :units
   resources :users

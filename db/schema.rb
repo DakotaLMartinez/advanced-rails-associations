@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_31_214100) do
+ActiveRecord::Schema.define(version: 2018_07_31_214325) do
+
+  create_table "assigned_tickets", force: :cascade do |t|
+    t.integer "employee_id"
+    t.integer "ticket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tickets", force: :cascade do |t|
     t.integer "employee_id"

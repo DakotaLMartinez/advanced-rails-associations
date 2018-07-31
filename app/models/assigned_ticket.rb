@@ -1,0 +1,2 @@
+class AssignedTicket < ApplicationRecord
+end
