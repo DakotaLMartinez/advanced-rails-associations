@@ -29,10 +29,9 @@ manager = User.first_or_create(
   unit: "Basement",
   manager: true
 )
-employee = User.first_or_create(
+employee = manager.employees.first_or_create(
   first_name: "Dakota", 
   last_name: "Martinez", 
-  unit: "Mars",
   manager: false,
   manager_id: manager.id
 )
